@@ -33,7 +33,7 @@ To set up the project, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/NafisMahi/NER-in-CTI-with-LLMs.git
+    git clone https://github.com/NafisMahi/NER-in-CTI-with-Transformer-LLMs.git
     ```
 
 2. Create a virtual environment and activate it:
@@ -57,7 +57,9 @@ To set up the project, follow these steps:
     test_dataset = datasets.load_dataset('csv', data_files='path/to/test.csv')
     ```
 
-2. Tokenize and align labels:
+    Please note that the CSV files are in the [DNRTI_CSV](https://github.com/NafisMahi/NER-in-CTI-with-Transformer-LLMs/tree/main/DNRTI_CSV) and [APTNER_CSV](https://github.com/NafisMahi/NER-in-CTI-with-Transformer-LLMs/tree/main/APTNER_CSV) durectories
+
+3. Tokenize and align labels:
     ```python
     from transformers import BertTokenizerFast
 
@@ -76,7 +78,7 @@ To set up the project, follow these steps:
     tokenized_datasets = train_dataset.map(tokenize_and_align_labels, batched=True)
     ```
 
-3. Fine-tune the transformer model:
+4. Fine-tune the transformer model:
     ```python
     from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
 
@@ -102,7 +104,7 @@ To set up the project, follow these steps:
     trainer.train()
     ```
 
-4. Evaluate the model:
+5. Evaluate the model:
     ```python
     metrics = trainer.evaluate(eval_dataset=tokenized_datasets['test'])
     print(metrics)
