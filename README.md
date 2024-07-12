@@ -12,7 +12,6 @@ This repository contains the code and datasets for the undergraduate thesis proj
 - [Installation](#installation)
 - [Usage](#usage)
 - [Results](#results)
-- [Contributors](#contributors)
 - [License](#license)
 
 ## Introduction
@@ -114,9 +113,6 @@ To set up the project, follow these steps:
 
 Our experiments demonstrated that the SecureBERT model fine-tuned on the DNRTI and APTNER datasets outperformed state-of-the-art metrics in NER for CTI, establishing that LLMs are superior to traditional NLP techniques in this domain.
 
-## Contributors
-
-- [Your Name](https://github.com/yourusername)
 
 ## License
 
